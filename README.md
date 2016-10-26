@@ -1,14 +1,24 @@
-# Regularization Path of Cross-Validation Error Lower Bounds
+# Regularization Path of Cross-Validation Error Lower Bounds (NIPS'15)
 
-##About
-Source code for Regularization Path of Cross-Validation Error Lower Bounds
+<div align="center">
+<img src="fig/pathExample5_nips2.png" width="400px">
+</div>
 
-we use [Eigen3.2.2](http://eigen.tuxfamily.org/index.php?title=Main_Page)
+An illustration ofthe proposed framework. One of our algorithms automatically selected regularization parameter values in [10^-3, 10^3], and an upper bound of the validation error for each of them is obtained by solving an optimization problem approximately. Among those, the one with the smallest validation error upper bound is guaranteed to be epsilon(= 0.1) approximate regularization parameter in the sense that the validation error for the regularization parameter is no greater by ε than the smallest possible validation error in the whole interval [10^-3, 10^3].
+
+##Abstract
+
+Careful tuning of a regularization parameter is indispensable in many machine learning tasks because it has a significant impact on generalization performances.Nevertheless, current practice of regularization parameter tuning is more of an art than a science, e.g., it is hard to tell how many grid-points would be needed in cross-validation (CV) for obtaining a solution with sufficiently small CV error.In this paper we propose a novel framework for computing a lower bound of the CV errors as a function of the regularization parameter, which we call regularization path of CV error lower bounds.The proposed framework can be used for providing a theoretical approximation guarantee on a set of solutions in the sense that how far the CV error of the current best solution could be away from best possible CV error in the entire range of the regularization parameters.We demonstrate through numerical experiments that a theoretically guaranteed a choice of regularization parameter in the above sense is possible with reasonable computational costs.
+
+##Enviromental Requirement
+* gcc version *> 4.8.0*
+* cmake version *> 2.8.12*
+
 
 ##How to Compile
 
 ```
-> cd problem1 or problem2
+> cd [problem1 or problem2]
 > cmake .
 > make test_module
 ```

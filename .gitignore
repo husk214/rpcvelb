@@ -12,6 +12,8 @@
 !/SDM
 !/Eigen
 
+!/fig
+.DS_Store
 
 !/problem1/
 /problem1/**
